@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanjil Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+
+        body{
+            font-family:'Inter',sans-serif;
+            background:#fefefe;
+            color:#1a1e2b;
+        }
+
+        header{
+            position:sticky;top:0;
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.05);
+            z-index:1000;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:1rem 2rem;
+        }
+
+        .logo{font-size:1.8rem;font-weight:800;}
+
+        nav ul{
+            display:flex;
+            gap:20px;
+            list-style:none;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#333;
+            font-weight:600;
+            position:relative;
+            transition:0.3s;
+        }
+
+        /* Hover effect */
+        nav a::after{
+            content:'';
+            position:absolute;
+            width:0%;
+            height:2px;
+            left:0;
+            bottom:-5px;
+            background:#3b5c9e;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#3b5c9e;
+        }
+
+        nav a:hover::after{
+            width:100%;
+        }
+
+        /* ICON STYLE */
+        nav i{
+            margin-left:10px;
+            color:#2d3f6e;
+            transition:0.3s;
+        }
+        nav i:hover{
+            transform:scale(1.2);
+        }
+
+        section{
+            max-width:1200px;
+            margin:auto;
+            padding:60px 20px;
+        }
+
+        /* HERO */
+        .hero{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            min-height:90vh;
+        }
+
+        .hero-text h1{font-size:3rem;}
+        .hero-text span{color:#3b5c9e;}
+        .hero-text p{margin:15px 0;}
+
+        .btn{
+            background:#1e2f4b;
+            color:white;
+            padding:10px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#3b5c9e;
+        }
+
+        /* IMAGE */
+        .hero-image img{
+            width:300px;
+            height:300px;
+            border-radius:50%;
+            object-fit:cover;
+            box-shadow:0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* ABOUT */
+        .about{
+            text-align:center;
+            max-width:800px;
+            margin:auto;
+        }
+
+        .about h2{
+            margin-bottom:20px;
+        }
+
+        .about p{
+            line-height:1.8;
+            color:#444;
+        }
+
+        /* PROJECT */
+        .project-container{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .card{
+            padding:20px;
+            width:280px;
+            border-radius:20px;
+            background:white;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-links a{
+            text-decoration:none;
+            color:#2d3f6e;
+            transition:0.3s;
+        }
+
+        .project-links a:hover{
+            color:#3b5c9e;
+        }
+
+        /* CONTACT */
+        .contact{text-align:center;}
+
+        .contact-card{
+            display:inline-block;
+            margin:10px;
+            padding:10px 20px;
+            background:#f1f4f9;
+            border-radius:30px;
+            text-decoration:none;
+            color:#333;
+            transition:0.3s;
+        }
+
+        .contact-card:hover{
+            background:#3b5c9e;
+            color:white;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#eee;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div>
+        <span class="logo">Tanjil</span>
+
+        <!-- Social Icons -->
+        <a href="https://www.behance.net/tanjil_al-nayeef" target="_blank">
+            <i class="fab fa-behance"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/tanjil-al-nayeef-275510343/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+<div class="hero-text">
+<h1>Hello, I'm <span>Tanjil</span></h1>
+<p>UI/UX & Graphic Designer</p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
+
+<div class="hero-image">
+<img src="Nayeef04.jpg" alt="Profile">
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>
+I am a passionate UI/UX designer and ICT student based in Dhaka, Bangladesh. 
+I love crafting modern, user-friendly designs and meaningful digital experiences. 
+With a keen eye for detail and a human-centered approach, I transform ideas into 
+elegant interfaces that people enjoy using. Let's build something remarkable together.
+</p>
+</section>
+
+<!-- PROJECT -->
+<section id="projects">
+<h2>My Profiles</h2>
+
+<div class="project-container">
+
+<div class="card">
+<h3>Behance</h3>
+<p>My design works</p>
+<div class="project-links">
+<a href="https://www.behance.net/tanjil_al-nayeef" target="_blank">
+<i class="fab fa-behance"></i> Visit
+</a>
+</div>
+</div>
+
+<div class="card">
+<h3>LinkedIn</h3>
+<p>Professional profile</p>
+<div class="project-links">
+<a href="https://www.linkedin.com/in/tanjil-al-nayeef-275510343/" target="_blank">
+<i class="fab fa-linkedin"></i> Visit
+</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contact</h2>
+
+<a href="https://www.behance.net/tanjil_al-nayeef" target="_blank" class="contact-card">
+<i class="fab fa-behance"></i> Behance
+</a>
+
+<a href="https://www.linkedin.com/in/tanjil-al-nayeef-275510343/" target="_blank" class="contact-card">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="https://wa.me/01629170001" target="_blank" class="contact-card">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+</section>
+
+<footer>
+<p>© 2026 Tanjil Portfolio</p>
+</footer>
+
+</body>
+</html>
